@@ -10,8 +10,9 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types/**", "@typings/**"]
+    "typeRoots": ["node_modules/@types", "@typings"],
+    "lib": ["esnext", "dom"]
   },
-  "include": ["src/**/*.ts", "src/**/*.vue", "@typings"],
+  "include": ["@typings"],
   "exclude": ["node_modules"]
 }
