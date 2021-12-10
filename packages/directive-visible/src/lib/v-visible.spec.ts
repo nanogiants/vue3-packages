@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { defineComponent } from 'vue';
 
-import { vVisible } from './v-Visible';
+import { vVisible } from './v-visible';
 
 const App = defineComponent({
   props: {
