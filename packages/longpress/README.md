@@ -13,8 +13,17 @@ yarn add @nanogiants/vue3-longpress
 ## Usage
 
 ```ts
+// main.ts file
+import { vLongpress } from 'vue3-longpress';
+app.directive('use-longpress', vLongpress);
+
+
+// component.ts
 <template>
-  <div v-use-longpress="500" @longpress="onLongpress">Hello World!</div>
+  <div>
+    <div v-use-longpress="500" @longpress="onLongpress">Hello World!</div>
+    <div v-use-longpress @longpress="onLongpress">Hello World!</div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -31,14 +40,14 @@ export default defineComponent({
 </script>
 ```
 
-## Contributing
+## args
 
-To contribute please fork the repository, create a new branch to make changes on and create a pull request into the develop branch of this repository.  
-Remember to write tests (if needed) to get the features approved.
+There is only one arg you can pass.  
+The duration can be set as an interger in ms. Default is 500. 
+```ts
+<div v-use-longpress="1000" @longpress="onLongpress"></div>
+```
 
-## Feature Requests
-
-For feature requests please use the issuetracker and specify your exact needs. 
 
 ## License
 

@@ -1,6 +1,11 @@
 {
   "name": "@nanogiants/vue3-longpress",
   "version": "1.0.0",
+  "files": [
+    "./dist",
+    "./README.md",
+    "./package.json"
+  ],
   "main": "dist/js/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/js/index.d.ts",

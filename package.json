@@ -3,7 +3,11 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "publish": "lerna publish",
+    "version": "lerna version",
+    "changed": "lerna changed"
   },
   "dependencies": {
     "vue": "^3.2.0"
