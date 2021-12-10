@@ -6,8 +6,8 @@
     "test": "lerna run test",
     "lint": "lerna run lint",
     "build": "lerna run build",
-    "publish": "lerna publish",
-    "version": "lerna version",
+    "version": "lerna version --conventional-commits --yes --no-git-tag-version --no-push",
+    "publish": "lerna publish from-git --yes",
     "changed": "lerna changed"
   },
   "dependencies": {
@@ -48,5 +48,6 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "version": "0.0.0"
 }
