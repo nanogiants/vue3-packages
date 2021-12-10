@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "declarationDir": "lib",
+    "target": "es5",
+    "module": "es2015",
+    "sourceMap": true,
+    "declaration": true,
+    "importHelpers": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "typeRoots": ["node_modules/@types/**", "@typings/**"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue", "@typings"],
+  "exclude": ["node_modules"]
+}
