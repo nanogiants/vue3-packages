@@ -1,0 +1,19 @@
+{
+  "name": "@nanogiants/vue3-visible",
+  "version": "1.0.0",
+  "files": [
+    "./dist",
+    "./README.md",
+    "./package.json"
+  ],
+  "main": "dist/js/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/js/index.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rimraf dist && rollup -c",
+    "test": "jest",
+    "lint": "eslint \"src/**/*.{ts,vue}\""
+  }
+}

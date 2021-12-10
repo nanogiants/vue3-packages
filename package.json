@@ -1,15 +1,14 @@
 {
-  "name": "@nanogiants/vue3-longpress",
-  "version": "1.0.0",
-  "main": "dist/js/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/js/index.d.ts",
+  "name": "vue3-packages",
+  "private": true,
   "sideEffects": false,
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rimraf dist && rollup -c",
-    "test": "jest",
-    "lint": "eslint \"src/**/*.{ts,vue}\""
+    "lerna:test": "lerna run test",
+    "lerna:lint": "lerna run lint",
+    "lerna:build": "lerna run build",
+    "lerna:changed": "lerna changed",
+    "lerna:version": "lerna version --conventional-commits --yes",
+    "lerna:publish": "lerna publish from-git --yes"
   },
   "dependencies": {
     "vue": "^3.2.0"
@@ -18,6 +17,7 @@
     "vue": "^3.2.0"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^15.0.0",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/jest": "^27.0.3",
@@ -28,7 +28,11 @@
     "eslint": "^8.4.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jest": "^25.3.0",
-    "jest": "^27.4.3",
+    "husky": "^7.0.4",
+    "jest": "^27.4.4",
+    "lerna": "^4.0.0",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.61.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -36,6 +40,13 @@
     "rollup-plugin-vue": "6.0.0",
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.2"
-  }
+    "typescript": "^4.5.3"
+  },
+  "lint-staged": {
+    "*.{ts,vue}": "eslint --max-warnings 0 --no-ignore",
+    "!(*.d).{ts,vue,json}": "prettier --check \"!(*.d).{ts,vue,json}\""
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

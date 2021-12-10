@@ -1,35 +1,7 @@
 
-# vue3-longpress
-This package contains a Vue 3 directive which adds the `@longpress` event to an element.
+# Vue 3 Packages
+This monorepo includes all Vue 3 packages we create at [Nanogiants](https://nanogiants.de/).
 
-## Installation
-
-```bash
-npm i @nanogiants/vue3-longpress
-# or
-yarn add @nanogiants/vue3-longpress
-```
-
-## Usage
-
-```ts
-<template>
-  <div v-use-longpress="500" @longpress="onLongpress">Hello World!</div>
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  setup() {
-    const onLongpress = (e: CustomEvent) => {
-      console.log('onLongpress', e);
-    };
-    return { onLongpress };
-  },
-});
-</script>
-```
 
 ## Contributing
 
