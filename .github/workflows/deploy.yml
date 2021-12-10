@@ -72,9 +72,9 @@ jobs:
         run: yarn lerna:build
       - name: Add Token
         run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
-          env:
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish
-        run: | 
+        run: |
           yarn lerna:version
           yarn lerna:publish
