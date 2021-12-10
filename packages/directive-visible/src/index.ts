@@ -1,0 +1,1 @@
+export { vVisible } from './lib';
