@@ -1,4 +1,4 @@
-name: Deploy on NPM
+name: Build
 
 on:
   pull_request:
@@ -70,4 +70,4 @@ jobs:
     needs: [install_deps, lint, test]
     steps:
       - name: Build Library
-        run: yarn build
+        run: yarn lerna:build

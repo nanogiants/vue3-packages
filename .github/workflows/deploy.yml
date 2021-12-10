@@ -69,7 +69,7 @@ jobs:
     needs: [install_deps, lint, test]
     steps:
       - name: Build Library
-        run: yarn build
+        run: yarn lerna:build
       - name: Add Token
         run: echo //registry.npmjs.org/:_authToken=${NPM_TOKEN} > .npmrc
           env:
