@@ -1,0 +1,73 @@
+name: Deploy on NPM
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  install_deps:
+    name: 'Install dependencies'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Cache node_modules
+        id: cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: yarn
+
+  lint:
+    name: 'Lint'
+    runs-on: ubuntu-latest
+    needs: install_deps
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Lint Projectfiles
+        run: yarn lerna:lint
+
+  test:
+    name: 'Test'
+    runs-on: ubuntu-latest
+    needs: install_deps
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+      - name: Running Tests
+        run: yarn lerna:test
+
+  build:
+    runs-on: ubuntu-latest
+    needs: [install_deps, lint, test]
+    steps:
+      - name: Build Library
+        run: yarn build
