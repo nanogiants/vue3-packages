@@ -1,7 +1,25 @@
 {
   "name": "vue3-packages",
+  "description": "This is the monorepo for Vue 3 Packages",
   "private": true,
   "sideEffects": false,
+  "author": {
+    "name": "NanoGiants GmbH",
+    "email": "developers@nanogiants.de",
+    "url": "http://nanogiants.de/"
+  },
+  "contributors": [
+    {
+      "name": "René Heinen",
+      "email": "r.heinen@nanogiants.de"
+    }
+  ],
+  "homepage": "https://github.com/nanogiants/vue3-packages/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanogiants/vue3-packages.git"
+  },
+  "license": "MIT",
   "scripts": {
     "lerna:test": "lerna run test",
     "lerna:lint": "lerna run lint",

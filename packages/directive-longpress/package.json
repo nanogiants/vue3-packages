@@ -10,6 +10,30 @@
   "module": "dist/esm/index.js",
   "types": "dist/js/index.d.ts",
   "sideEffects": false,
+  "author": {
+    "name": "NanoGiants GmbH",
+    "email": "developers@nanogiants.de",
+    "url": "http://nanogiants.de/"
+  },
+  "contributors": [
+    {
+      "name": "René Heinen",
+      "email": "r.heinen@nanogiants.de"
+    }
+  ],
+  "homepage": "https://github.com/nanogiants/vue3-packages/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nanogiants/vue3-packages.git"
+  },
+  "keywords": [
+    "vuejs",
+    "vue3",
+    "vue",
+    "longpress",
+    "directive"
+  ],
+  "license": "MIT",
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rimraf dist && rollup -c",
