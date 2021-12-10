@@ -43,7 +43,7 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Lint Projectfiles
-        run: yarn lint
+        run: yarn lerna:lint
 
   test:
     name: 'Test'
@@ -62,7 +62,7 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       - name: Running Tests
-        run: yarn test
+        run: yarn lerna:test
 
   build_and_deploy:
     runs-on: ubuntu-latest
@@ -76,5 +76,5 @@ jobs:
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish
         run: | 
-          yarn version
-          yarn publish
+          yarn lerna:version
+          yarn lerna:publish

@@ -3,12 +3,12 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "test": "lerna run test",
-    "lint": "lerna run lint",
+    "lerna:test": "lerna run test",
+    "lerna:lint": "lerna run lint",
     "build": "lerna run build",
-    "version": "lerna version --conventional-commits --yes --no-git-tag-version --no-push",
-    "publish": "lerna publish from-git --yes",
-    "changed": "lerna changed"
+    "lerna:changed": "lerna changed",
+    "lerna:version": "lerna version --conventional-commits --yes --no-git-tag-version --no-push",
+    "lerna:publish": "lerna publish from-git --yes"
   },
   "dependencies": {
     "vue": "^3.2.0"
