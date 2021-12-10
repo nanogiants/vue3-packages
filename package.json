@@ -5,7 +5,7 @@
   "scripts": {
     "lerna:test": "lerna run test",
     "lerna:lint": "lerna run lint",
-    "build": "lerna run build",
+    "lerna:build": "lerna run build",
     "lerna:changed": "lerna changed",
     "lerna:version": "lerna version --conventional-commits --yes",
     "lerna:publish": "lerna publish from-git --yes"
