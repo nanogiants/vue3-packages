@@ -15,7 +15,10 @@ yarn add @nanogiants/vue3-visible
 
 ```ts
 // main.ts file
-import { vVisible } from 'vue3-visible';
+import { vVisible } from '@nanogiants/vue3-visible';
+import App from './App.vue';
+
+const app = createApp(App);
 app.directive('visible', vVisible);
 
 
