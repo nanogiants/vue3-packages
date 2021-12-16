@@ -1,1 +1,0 @@
-export { vLongpress } from './lib';

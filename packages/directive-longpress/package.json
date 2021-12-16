@@ -5,9 +5,9 @@
     "dist",
     "README.md"
   ],
-  "main": "dist/js/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/js/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/lib/index.d.ts",
   "sideEffects": false,
   "author": {
     "name": "NanoGiants GmbH",
@@ -34,8 +34,8 @@
   ],
   "license": "MIT",
   "scripts": {
-    "dev": "rollup -c -w",
-    "build": "rimraf dist && rollup -c",
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
     "test": "jest",
     "lint": "eslint \"src/**/*.{ts,vue}\""
   }

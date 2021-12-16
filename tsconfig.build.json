@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "declarationDir": "lib",
     "target": "es5",
     "module": "es2015",
     "sourceMap": true,
@@ -10,9 +9,7 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "typeRoots": ["node_modules/@types", "@typings"],
     "lib": ["esnext", "dom"]
   },
-  "include": ["@typings"],
   "exclude": ["node_modules"]
 }
