@@ -26,7 +26,8 @@
     "lerna:build": "lerna run build",
     "lerna:changed": "lerna changed",
     "lerna:version": "lerna version --conventional-commits --yes",
-    "lerna:publish": "lerna publish from-package --yes --no-verify-access"
+    "lerna:publish": "lerna publish from-package --yes --no-verify-access",
+    "clean:modules": "rm -rf node_modules && rm -rf packages/*/node_modules"
   },
   "dependencies": {
     "vue": "^3.2.0"
@@ -36,29 +37,28 @@
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^15.0.0",
-    "@rollup/plugin-commonjs": "^21.0.1",
-    "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/jest": "^27.0.3",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
     "@typescript-eslint/parser": "^5.6.0",
+    "@vitejs/plugin-vue": "^2.0.0",
     "@vue/compiler-sfc": "^3.2.24",
     "@vue/test-utils": "^2.0.0-rc.17",
     "eslint": "^8.4.1",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jest": "^25.3.0",
+    "eslint-plugin-vue": "^8.2.0",
     "husky": "^7.0.4",
     "jest": "^27.4.4",
     "lerna": "^4.0.0",
     "lint-staged": "^12.1.2",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.61.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.31.1",
-    "rollup-plugin-vue": "6.0.0",
     "ts-jest": "^27.1.1",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.3"
+    "typescript": "^4.5.3",
+    "vite": "^2.7.2",
+    "vue-tsc": "^0.29.8"
   },
   "lint-staged": {
     "*.{ts,vue}": "eslint --max-warnings 0 --no-ignore",
