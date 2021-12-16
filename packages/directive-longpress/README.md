@@ -14,7 +14,10 @@ yarn add @nanogiants/vue3-longpress
 
 ```ts
 // main.ts file
-import { vLongpress } from 'vue3-longpress';
+import { vLongpress } from '@nanogiants/vue3-longpress';
+import App from './App.vue';
+
+const app = createApp(App);
 app.directive('use-longpress', vLongpress);
 
 
