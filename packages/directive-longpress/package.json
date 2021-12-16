@@ -1,6 +1,6 @@
 {
   "name": "@nanogiants/vue3-longpress",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "files": [
     "dist",
     "README.md"
