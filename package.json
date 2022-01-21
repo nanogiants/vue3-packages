@@ -26,7 +26,7 @@
     "lerna:lint": "lerna run lint",
     "lerna:build": "lerna run build",
     "lerna:changed": "lerna changed",
-    "lerna:version": "lerna version",
+    "lerna:version": "lerna version -m \"chore(release): publish %s\"",
     "lerna:publish": "lerna publish from-package --yes --no-verify-access",
     "clean:modules": "rm -rf node_modules && rm -rf packages/*/node_modules"
   },
