@@ -1,4 +1,6 @@
+import resolve from '@rollup/plugin-node-resolve';
 import vue from '@vitejs/plugin-vue';
+import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import typescript from 'rollup-plugin-typescript2';
 import { defineConfig } from 'vite';
 
@@ -13,6 +15,8 @@ export default defineConfig({
     },
   },
   plugins: [
+    peerDepsExternal(),
+    resolve(),
     vue(),
     {
       ...typescript(),

@@ -1,6 +1,6 @@
 {
-  "name": "@nanogiants/vue3-visible",
-  "version": "1.0.6",
+  "name": "@nanogiants/vue3-sanitize-html",
+  "version": "1.0.0",
   "files": [
     "dist",
     "README.md"
@@ -29,7 +29,9 @@
     "vuejs",
     "vue3",
     "vue",
-    "visible",
+    "sanitize",
+    "sanitization",
+    "html",
     "directive"
   ],
   "license": "MIT",
@@ -38,5 +40,14 @@
     "build": "vue-tsc --noEmit && vite build",
     "test": "jest",
     "lint": "eslint \"src/**/*.{ts,vue}\""
+  },
+  "devDependencies": {
+    "@types/sanitize-html": "^2.6.2"
+  },
+  "dependencies": {
+    "sanitize-html": "^2.6.1"
+  },
+  "peerDependencies": {
+    "sanitize-html": "^2.6.1"
   }
 }
