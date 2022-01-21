@@ -1,6 +1,6 @@
 
 # vue3-sanitize-html
-This package contains a Vue 3 directive which adds v-sanitize-html. 
+This package contains a Vue 3 directive which adds v-sanitize-html to an element. 
 
 ## Installation
 
