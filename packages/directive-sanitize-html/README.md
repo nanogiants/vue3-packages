@@ -24,7 +24,7 @@ import { vSanitizeHtml } from '@nanogiants/vue3-sanitize-html';
 import App from './App.vue';
 
 const app = createApp(App);
-app.directive('use-longpress', vLongpress);
+app.directive('sanitize-html', vSanitizeHtml);
 ```
 
 #### **`component.vue`**
