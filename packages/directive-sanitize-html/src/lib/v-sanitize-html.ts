@@ -11,4 +11,8 @@ export const vSanitizeHtml: Directive<HTMLElement, DirectiveValue> = {
     const saveHtml = sanitize(binding.value.html, binding.value.options);
     el.innerHTML = saveHtml;
   },
+  updated(el, binding) {
+    const saveHtml = sanitize(binding.value.html, binding.value.options);
+    el.innerHTML = saveHtml;
+  },
 };
